@@ -15,11 +15,22 @@ namespace CollectionViewOrSmth
 
         private void GetDataFromEntry(object? sender, EventArgs e)
         {
-            uc.Add(Entr.Text);
+            string EntryText = Entr.Text;
+            if (!string.IsNullOrEmpty(EntryText))
+            {
+                uc.Add(Entr.Text);
+            }
         }
         private void DeleteData(object? sender, EventArgs e)
         {
             uc.Clear();
+        }
+        private void DeleteLastData(object? sender, EventArgs e)
+        {
+            if (uc.Count > 0)
+            {
+                uc.RemoveAt(uc.Count - 1);
+            }
         }
     }
 }

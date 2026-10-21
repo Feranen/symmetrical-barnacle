@@ -11,6 +11,7 @@
             <Entry Placeholder="" x:Name="Entr"/>
             <Button Text="Add" Clicked="GetDataFromEntry"/>
             <Button Text="Delete" Clicked="DeleteData"/>
+            <Button Text="Delete Last" Clicked="DeleteLastData"/>
             <CollectionView x:Name="Uc">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Span="2" Orientation="Vertical" />
